@@ -1,0 +1,185 @@
+body {
+  display: grid;
+  margin: 0px;
+  zoom: 0.8;
+  background-color: #f9f6f1;
+}
+
+circle {
+  fill: red;
+}
+
+text {
+  font-family: sans-serif;
+}
+.title{
+  text-align: center;
+  font-size: 4em;
+	color: #635F5D;
+}
+
+.label{
+  font-size: 0.8em;
+	fill: #635F5D;
+}
+
+.tick text{
+  font-size: 1.5em;
+  fill: #978F80;
+}
+
+.tick line{
+	stroke: #635F5D;
+  opacity: 0.9;
+}
+
+.domain{
+	stroke: #635F5D;
+  opacity: 0.9;
+}
+
+.scatterMat .domain{
+	stroke: #635F5D;
+  opacity: 0.3;
+}
+
+.scatterMat .tick line{
+	stroke: #635F5D;
+  opacity: 0.3;
+}
+
+.axis-label {
+  font-size: 2.5em;
+  fill:  #8E8883;
+}
+
+.boxLabel {
+  font-size: 1.3em;
+  fill:  #8E8883;
+}
+
+
+circle.hidden { fill: #111; fill-opacity: 1; r: 1px; }
+
+.svgContainer{
+ display: flex;
+ flex-direction: column;
+ border: 1px solid;
+ padding: 20px;
+ width: 2656px;
+ height: 1634px;
+}
+
+.svgContainer .uprow{
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+.svgContainer .uprow .choropleth{
+  display: flex;
+  flex-direction: column;
+  width:1500px;
+  flex: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #635F5D;
+ }
+
+ .svgContainer .uprow .choropleth #menus{
+  margin-top: 50px;
+ }
+
+ .svgContainer .uprow .choropleth #cloSvg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+.svgContainer .uprow .scatterMat{
+  display: inline-flex;
+  border: 5px solid #635F5D;
+  margin-left: 20px;
+ }
+
+#selectionStuff{
+  display: flex;
+  flex-direction: column;
+}
+
+#Features{
+  display: flex;
+  flex-direction: row;
+  margin-top: -15px;
+}
+#inputBox{
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+}
+#textBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 250px;
+}
+
+#Continent{
+  display: flex;
+  flex-direction: row;
+  margin-top: -15px;
+}
+/* #textBox text{
+  margin-top: 5.5px;
+} */
+
+.svgContainer .bottomrow{
+  display: inline-flex;
+}
+
+.svgContainer .bottomrow .barPlot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:50%;
+  border: 5px solid #635F5D;
+}
+
+.svgContainer .bottomrow .barPlot .button{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.svgContainer .bottomrow .bubbleChart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:50%;
+  border: 5px solid #635F5D;
+  margin-left: 20px;
+}
+
+.svgContainer .bottomrow .bubbleChart #menus{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  white-space: pre-wrap;
+}
+
+.svgContainer .bottomrow .bubbleChart #bubble_chart{
+  width: 1200px;
+  height: 600px;
+}
+
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  pointer-events: none;
+}

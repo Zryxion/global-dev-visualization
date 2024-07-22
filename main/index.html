@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brushable scatter plot matrices</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src='https://unpkg.com/d3@7.8.5/dist/d3.min.js'></script>
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  </head>
+  <body>
+    <script src="scatterMat.js"></script>
+    <div class="svgContainer">
+      
+      <div class="uprow">
+        <div class="titleplot">
+          <div class="title"><text>Global Development Pattern</text></div>
+          <!-- here lies the graph -->
+          <div class="choropleth">
+            <div id="menus">
+              sort by: <br> 
+              <span id="x-axisMenuC"></span><br>
+            </div>  
+            <div class="tooltip"></div>
+            <div id="cloSvg"></div>
+            <script src="choropleth.js"></script>
+         </div>
+        </div>
+
+        <div class="scatterMat">
+          
+          <div class="plot">
+            <svg id="svgScatter"></svg>
+          </div>
+
+          <div id="selectionStuff">
+  
+            <h3>Plotted Features:</h3>
+            <div id="Features">
+              <div id="inputBox"></div>
+              <div id="textBox"></div>
+            </div>
+  
+            <h3>Plotted Continent:</h3>
+            <div id="Continent">
+              <div id="inputBox"></div>
+              <div id="textBox"></div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+      
+      <div class="bottomrow">
+
+        <div class="barPlot">
+          <div class="button">
+            <button id="asc">Ascending</button>
+            <button id="desc">Descending</button>
+            <select id="regionDropdown"></select>
+            <select id="valueDropdown"></select>
+          </div>    
+          <div class="svg">                                                
+            <svg width="1200" height="500"></svg>
+          </div>
+          <script src="Barplot.js"></script>
+        </div>
+
+        <div class="bubbleChart">
+          <div class="tooltip"></div>
+          <div id="menus">
+            <span >x-axis:</span>
+            <span id="x-axisMenu"></span>
+            <span style="width:50px"></span>
+            <span >y-axis:</span>
+            <span id="y-axisMenu"></span>
+          </div>  
+      
+          <div id="bubble_chart"></div>
+          <script src="bubbleChart.js"></script>
+          <script src="dropDownMenu.js"></script>
+        </div>
+
+      </div>
+
+
+    </div>
+  </body>
+</html>
